@@ -13,29 +13,34 @@ class Directory extends React.Component {
                 {
                     title: 'lace wigs',
                     imageUrl: 'https://i.shgcdn.com/b6376382-a9e7-4f86-bdaf-86aaa1d1c905/-/format/auto/-/preview/3000x3000/-/quality/lighter/',
-                    id: 1
+                    id: 1,
+                    linkUrl: 'lace-wigs/'
                 },
                 {
                     title: 'hair extensions',
                     imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/71et1ZmxIUL._SY355_.jpg',
-                    id: 2
+                    id: 2,
+                    linkUrl: ''
                 },
                 {
                     title: 'hair pieces',
                     imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/71j5HU2oBgL._SY355_.jpg',
-                    id: 3
+                    id: 3,
+                    linkUrl: ''
                 },
                 {
                     title: 'accesories',
                     imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCICYeijY4ZaHQ0ZzoNyewhktTVbMFBTiG_9k5UedfBpMoGo7nqQ',
                     size: 'large',
-                    id: 4
+                    id: 4,
+                    linkUrl: ''
                 },
                 {
                     title: 'hair care',
                     imageUrl: 'https://cdn.shopify.com/s/files/1/0390/2985/products/Website-image_O_M-shampoo-_-conditioner-_-mask_600x.jpg?v=1536165016',
                     size: 'large',
-                    id: 5
+                    id: 5,
+                    linkUrl: ''
                 }
             ]
         }
@@ -45,8 +50,8 @@ class Directory extends React.Component {
     render () {
         return (
             <div className='directory-menu'>
-                {this.state.sections.map(({ title, imageUrl, id, size}) => 
-                    <MenuItem  key={id} title={title} imageUrl={imageUrl} size={size} />
+                {this.state.sections.map(({ id, ...otherSectionsProps}) => 
+                    <MenuItem  key={id} {...otherSectionsProps} />
                 )}                
             </div>
         )
