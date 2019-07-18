@@ -14,7 +14,7 @@ class Directory extends React.Component {
                     title: 'lace wigs',
                     imageUrl: 'https://i.shgcdn.com/b6376382-a9e7-4f86-bdaf-86aaa1d1c905/-/format/auto/-/preview/3000x3000/-/quality/lighter/',
                     id: 1,
-                    linkUrl: 'lace-wigs/'
+                    linkUrl: 'lace-wigs'
                 },
                 {
                     title: 'hair extensions',
@@ -50,8 +50,8 @@ class Directory extends React.Component {
     render () {
         return (
             <div className='directory-menu'>
-                {this.state.sections.map(({ id, ...otherSectionsProps}) => 
-                    <MenuItem  key={id} {...otherSectionsProps} />
+                {this.state.sections.map(({ id, ...otherSectionProps}) => 
+                    <MenuItem  key={id} {...otherSectionProps} />
                 )}                
             </div>
         )
