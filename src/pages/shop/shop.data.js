@@ -1,8 +1,8 @@
 const SHOP_DATA = [
     {
         id: 1,
-        title: 'Lace Wigs',
-        routeName: 'lace-wigs',
+        title: 'Hats',
+        routeName: 'hats',
         items: [
           {
             id: 1,
